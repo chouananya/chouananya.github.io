@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"chouanan.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Muse | Mist":320,"Pisces | Gemini":240,"width":300,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="day 03 2020.12.21">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java笔记&lt;三&gt;">
+<meta property="og:url" content="http://chouanan.cn/2021/01/15/java%E7%AC%94%E8%AE%B03/index.html">
+<meta property="og:site_name" content="臭anan的博客">
+<meta property="og:description" content="day 03 2020.12.21">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-15T13:16:45.000Z">
+<meta property="article:modified_time" content="2021-01-15T13:32:19.103Z">
+<meta property="article:author" content="xxk">
+<meta property="article:tag" content="code">
+<meta property="article:tag" content="理论">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://chouanan.cn/2021/01/15/java%E7%AC%94%E8%AE%B03/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>java笔记<三> | 臭anan的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">臭anan的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活中的点点滴滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chouanan.cn/2021/01/15/java%E7%AC%94%E8%AE%B03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="xxk">
+      <meta itemprop="description" content="赚够五百万就回家养猪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="臭anan的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          java笔记<三>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-15 21:16:45 / 修改时间：21:32:19" itemprop="dateCreated datePublished" datetime="2021-01-15T21:16:45+08:00">2021-01-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">java基础知识</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>day 03 2020.12.21</p>
+<a id="more"></a>
+
+<h4 id="每日复习"><a href="#每日复习" class="headerlink" title="每日复习"></a>每日复习</h4><h5 id="1、标识符的命名规则有哪些？（编译错误）"><a href="#1、标识符的命名规则有哪些？（编译错误）" class="headerlink" title="1、标识符的命名规则有哪些？（编译错误）"></a>1、标识符的命名规则有哪些？（编译错误）</h5><p>*26个字母大小写，0-9，——或$组成<br>*数字不可以开头<br>*不可以使用关键字和保留字，但能包含关键字和保留字<br>*Java严格区分大小写，长度无限制</p>
+<h5 id="2、标识的命名规范有哪些？"><a href="#2、标识的命名规范有哪些？" class="headerlink" title="2、标识的命名规范有哪些？"></a>2、标识的命名规范有哪些？</h5><p>包名：xxxyyyzzz<br>类名、接口名：XxxYyyZzz<br>变量名、方法名：xxxYyyZzz<br>常量名：XXX_YYY_ZZZ</p>
+<h5 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h5><p>基本数据类型：<br>数值型：整数类型（byte（1字节）、short（2）、int（4）、long（8字节））<br>浮点型：float（4字节）、double（8字节）<br>字符型：char（1字符=2字节）<br>布尔型：true、false</p>
+<p>引用数据类型：类、接口、数组</p>
+<h5 id="4、自动类型转换运算规则"><a href="#4、自动类型转换运算规则" class="headerlink" title="4、自动类型转换运算规则"></a>4、自动类型转换运算规则</h5><p>结论：当容量小的数据类型的变量于容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。<br>​    byte、char、short–&gt;int–&gt;long–&gt;float–&gt;double<br>​特别的：当byte、char、short三种类型做运算时，结果为int类型（包括三种类型作同种运算）<br>说明：容量大小表示数的大小范围</p>
+<p>string无论与哪种类型数据做运算都是连接运算：“+”</p>
+<h5 id="5、-强制类型转换：自动类型提升运算的逆运算"><a href="#5、-强制类型转换：自动类型提升运算的逆运算" class="headerlink" title="5、 强制类型转换：自动类型提升运算的逆运算"></a>5、 强制类型转换：自动类型提升运算的逆运算</h5><p>容量大—&gt;容量小<br>1、需要使用强转符：()<br>2、注意点：强制类型转换，可能导致精度损失。</p>
+<p>//整型常量，默认类型为int型<br>//浮点型常量，默认类型为double型</p>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p>算术、赋值、比较（关系）、逻辑、位、三元</p>
+<h5 id="算术：-正负"><a href="#算术：-正负" class="headerlink" title="算术：+/- 正负"></a>算术：+/- 正负</h5><p> +、-、、/ 加减乘除<br>      % 取余运算</p>
+<p>//结果的运算与被模数的符号相同<br>//开发中，经常使用取模符号判断能否被除尽的情况<br>//（前）++：先自增1，然后再运算<br>//（后）++：先运算，后自增1<br>//–同理</p>
+<h5 id="赋值："><a href="#赋值：" class="headerlink" title="赋值：="></a>赋值：=</h5><p>+=、-=、=、/=、%=<br>//支持连续赋值<br>//不会改变数据类型</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//开发中，实现+2的方法有哪几种</span></span><br><span class="line"><span class="number">1</span>、<span class="built_in">num</span> = <span class="built_in">num</span> + <span class="number">2</span>;</span><br><span class="line"><span class="number">2</span>、<span class="built_in">num</span> += <span class="number">2</span>;（推荐）</span><br><span class="line"><span class="comment">//+1的方法</span></span><br><span class="line"><span class="number">1</span>、<span class="built_in">num</span> = <span class="built_in">num</span> + <span class="number">1</span>;</span><br><span class="line"><span class="number">2</span>、<span class="built_in">num</span> += <span class="number">1</span>;</span><br><span class="line"><span class="number">3</span>、<span class="built_in">num</span>++;（推荐）</span><br></pre></td></tr></table></figure>
+<h5 id="比较运算符："><a href="#比较运算符：" class="headerlink" title="比较运算符："></a>比较运算符：</h5><p>==/|=/&lt;/&gt;/&lt;=?&gt;=<br>结果都是boolean型（true/false）</p>
+<h5 id="逻辑运算符："><a href="#逻辑运算符：" class="headerlink" title="逻辑运算符："></a>逻辑运算符：</h5><p>&amp;/&amp;&amp;（且）|/||（或）<br>！（非）<br>^（异或）相同就false 不同就true</p>
+<h5 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h5><p>1、操作的都是boolean型运算符<br>2、&amp;/&amp;&amp;：1、运算结果相同 2、左边为true时，执行右边的运算 3、左边为false时，&amp;执行右边操作 &amp;&amp;不执行后续操作<br>|/||1、运算结果相同 2、左边为false时，执行右边的运算 3、左边为truee时，|执行右边操作 ||不执行后续操作<br>开发中使用&amp;&amp;/||</p>
+<p>位运算符（2进制运算）有范围限制<br>左移 3 &lt;&lt; 2 = 12 –&gt; 3<em>2</em>2 = 12<br>右移 3 &gt;&gt; 1 = 1 —&gt; 3/2 = 1<br>无符号右移（空缺位都是用0填补） 3&gt;&gt;&gt;1 = 1 —&gt; 3/2 = 1<br>操作的都是整型变量<br>面试题：最高效方式的计算2 * 8 ？ 2 &lt;&lt; 3 或 8 &lt;&lt; 1</p>
+<p>&amp;：只有1&amp;1是1，其余都是0<br>|：只要有一个是1就是1，其余都是0<br>^：只要一样就是0，不一样就是1<br>~：取反，各二进制码按补码各位取反</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">练习<span class="number">1</span>：交换两个变量的值</span><br><span class="line">int <span class="attr">num1</span> = <span class="number">10</span>;</span><br><span class="line">int <span class="attr">num2</span> = <span class="number">20</span>;</span><br><span class="line">方式<span class="number">1</span>：定义临时变量</span><br><span class="line">int num3;</span><br><span class="line"><span class="attr">num3</span> = num1;</span><br><span class="line"><span class="attr">num1</span> = num2;</span><br><span class="line"><span class="attr">num2</span> = num3;</span><br><span class="line">方式<span class="number">2</span>：好处：不用定义临时变量 坏处：有可能超出变量范围</span><br><span class="line">弊端：只能适用于数值类型</span><br><span class="line"><span class="attr">num1</span> = num1 + num2;</span><br><span class="line"><span class="attr">num2</span> = num1 - num2;</span><br><span class="line"><span class="attr">num1</span> = num1 - num2;</span><br></pre></td></tr></table></figure>
+<h5 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h5><p>结构：（条件表达式）？表达式1：表达式2<br>说明：1、表达式boolean类型 2、条件表达式true/false 执行条件表达式1/2<br>3、表达式1和表达式2要求是一样的。<br>4、三元运算符可以嵌套使用。</p>
+<p>凡是可以用三元运算符的地方可以改写成if-else结构，反之不一定。<br>两者皆可时优先选择三元运算符</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">如何实现一个<span class="number">0</span>~<span class="number">255</span>的十六进制，例如<span class="number">60</span>的十六进制</span><br><span class="line"><span class="comment">//方法一：自动实现</span></span><br><span class="line"><span class="keyword">String</span> str1 = Integer.toBinaryString(<span class="number">60</span>);</span><br><span class="line"><span class="comment">//方法二：手动实现</span></span><br><span class="line"><span class="keyword">int</span> i1 = <span class="number">60</span>;</span><br><span class="line"><span class="keyword">int</span> i2 = i1&amp;<span class="number">15</span>;</span><br><span class="line"><span class="keyword">String</span> j = (i2&gt;<span class="number">9</span>)?(<span class="keyword">char</span>)(i2<span class="number">-10</span>+<span class="string">&#x27;A&#x27;</span>)+<span class="string">&quot;&quot;</span>:i2+<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> temp =i1 &gt;&gt;<span class="number">4</span>;</span><br><span class="line">i2 = temp &amp; <span class="number">15</span>;</span><br><span class="line"><span class="keyword">String</span> k = (i2&gt;<span class="number">9</span>)?(<span class="keyword">char</span>)(i2<span class="number">-10</span>+<span class="string">&#x27;A&#x27;</span>)+<span class="string">&quot;&quot;</span>:<span class="number">2</span>i+<span class="string">&quot;&quot;</span>;</span><br><span class="line">System.out.<span class="built_in">println</span>(k+<span class="string">&quot;&quot;</span>+j);</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>觉得文章对您有帮助请我喝杯咖啡吧!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/uploads/we.png" alt="xxk 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/uploads/ali.png" alt="xxk 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/code/" rel="tag"># code</a>
+              <a href="/tags/%E7%90%86%E8%AE%BA/" rel="tag"># 理论</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/14/java%E7%AC%94%E8%AE%B02/" rel="prev" title="java笔记<二>">
+      <i class="fa fa-chevron-left"></i> java笔记<二>
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%8F%E6%97%A5%E5%A4%8D%E4%B9%A0"><span class="nav-text">每日复习</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%EF%BC%88%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%EF%BC%89"><span class="nav-text">1、标识符的命名规则有哪些？（编译错误）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E6%A0%87%E8%AF%86%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="nav-text">2、标识的命名规范有哪些？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">3、数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4%E3%80%81%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="nav-text">4、自动类型转换运算规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5%E3%80%81-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%9A%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87%E8%BF%90%E7%AE%97%E7%9A%84%E9%80%86%E8%BF%90%E7%AE%97"><span class="nav-text">5、 强制类型转换：自动类型提升运算的逆运算</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%EF%BC%9A-%E6%AD%A3%E8%B4%9F"><span class="nav-text">算术：+&#x2F;- 正负</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%EF%BC%9A"><span class="nav-text">赋值：&#x3D;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-text">比较运算符：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-text">逻辑运算符：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-text">说明：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">三元运算符</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xxk"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">xxk</p>
+  <div class="site-description" itemprop="description">赚够五百万就回家养猪</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/chouananya" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;chouananya" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxk</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
