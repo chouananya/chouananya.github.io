@@ -5,156 +5,62 @@
     <url>/2021/01/14/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <a id="more"></a>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
     <title>java笔记&lt;二&gt;</title>
     <url>/2021/01/14/java%E7%AC%94%E8%AE%B02/</url>
-    <content><![CDATA[<p>day02<br>
-2020.12.19</p>
+    <content><![CDATA[<p>day02<br>2020.12.19</p>
 <a id="more"></a>
-<h4 id="每日复习">每日复习</h4>
-<h5 id="1、JDK、JRE、JVM三者关系">1、JDK、JRE、JVM三者关系</h5>
-<figure class="highlight handlebars"><table><tr><td class="code"><pre><span class="line"><span class="xml">包含关系：</span><span class="template-variable">&#123;&#123;&#123;<span class="name">JVM</span>&#125;JRE&#125;JDK&#125;</span></span><br><span class="line"><span class="template-variable"><span class="attr">JDK</span>=JRE + JAVA开发工具（java.exe、javac.exe）</span></span><br><span class="line"><span class="template-variable"><span class="attr">JRD</span>=JVM + Java核心类库</span></span><br></pre></td></tr></table></figure>
-<h5 id="2为什么配置path环境变量？如何配置？">2为什么配置path环境变量？如何配置？</h5>
-<p>希望在任何路径下运行文件</p>
+<h4 id="每日复习"><a href="#每日复习" class="headerlink" title="每日复习"></a>每日复习</h4><h5 id="1、JDK、JRE、JVM三者关系"><a href="#1、JDK、JRE、JVM三者关系" class="headerlink" title="1、JDK、JRE、JVM三者关系"></a>1、JDK、JRE、JVM三者关系</h5><figure class="highlight handlebars"><table><tr><td class="code"><pre><span class="line"><span class="xml">包含关系：</span><span class="template-variable">&#123;&#123;&#123;<span class="name">JVM</span>&#125;JRE&#125;JDK&#125;</span></span><br><span class="line"><span class="template-variable"><span class="attr">JDK</span>=JRE + JAVA开发工具（java.exe、javac.exe）</span></span><br><span class="line"><span class="template-variable"><span class="attr">JRD</span>=JVM + Java核心类库</span></span><br></pre></td></tr></table></figure>
+<h5 id="2为什么配置path环境变量？如何配置？"><a href="#2为什么配置path环境变量？如何配置？" class="headerlink" title="2为什么配置path环境变量？如何配置？"></a>2为什么配置path环境变量？如何配置？</h5><p>希望在任何路径下运行文件</p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">JAVA_HOME</span> = bin的上一层目录</span><br><span class="line"><span class="attr">path</span> = %JAVA_HOME%\bin</span><br></pre></td></tr></table></figure>
-<h5 id="3、常用命令行操作">3、常用命令行操作</h5>
-<p>cd、del、md、rd、cd…、</p>
-<h5 id="4、创建如下的类并创建文件：ChairMan-java">4、创建如下的类并创建文件：ChairMan.java</h5>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChairMan</span>&#123;</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> staticvoid <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span></span>&#123;</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;姓名：习大大\n&quot;</span>);</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;性别：男&quot;</span>);</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;家庭住址：北京中南海&quot;</span>)；</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="5、编译和运行上述代码的指令">5、编译和运行上述代码的指令</h5>
-<p>编译：javac ChairMan.java（语法错误）fcd<br>
-运行：java ChairMan（运行错误）</p>
-<p>项目一：讲完流程控制第二章结束<br>
-项目二：讲完第四章面向对象（上）<br>
-项目三：讲完第七章异常处理以后</p>
-<p>附加项目一：讲完第七章异常处理以后<br>
-附加项目二：讲完第十一章IO流以后</p>
-<p>1、基础常识<br>
-软件：系统软件：windows，mac，unix，ios，android，…<br>
-应用软件：word，ppt，画图板<br>
-人机交互方式：GUI（图形化） vs CUI（命令行）</p>
+<h5 id="3、常用命令行操作"><a href="#3、常用命令行操作" class="headerlink" title="3、常用命令行操作"></a>3、常用命令行操作</h5><p>cd、del、md、rd、cd..、</p>
+<h5 id="4、创建如下的类并创建文件：ChairMan-java"><a href="#4、创建如下的类并创建文件：ChairMan-java" class="headerlink" title="4、创建如下的类并创建文件：ChairMan.java"></a>4、创建如下的类并创建文件：ChairMan.java</h5><figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChairMan</span>&#123;</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> staticvoid <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span></span>&#123;</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;姓名：习大大\n&quot;</span>);</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;性别：男&quot;</span>);</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">&quot;家庭住址：北京中南海&quot;</span>)；</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5、编译和运行上述代码的指令"><a href="#5、编译和运行上述代码的指令" class="headerlink" title="5、编译和运行上述代码的指令"></a>5、编译和运行上述代码的指令</h5><p>编译：javac ChairMan.java（语法错误）fcd<br>运行：java ChairMan（运行错误）</p>
+<p>项目一：讲完流程控制第二章结束<br>项目二：讲完第四章面向对象（上）<br>项目三：讲完第七章异常处理以后</p>
+<p>附加项目一：讲完第七章异常处理以后<br>附加项目二：讲完第十一章IO流以后</p>
+<p>1、基础常识<br>软件：系统软件：windows，mac，unix，ios，android，…<br>      应用软件：word，ppt，画图板<br>人机交互方式：GUI（图形化） vs CUI（命令行）</p>
 <p>应用程序 = 算法 + 数据结构</p>
-<p>2、计算机语言发展史<br>
-机器语言----&gt;汇编语言----&gt;高级语言（面向过程（c）、面向对象（java））</p>
-<p>3、java语言迭代<br>
-96发布JDK1.0----&gt;04年 JDK1.5（5.0）----&gt;14年 JDK8.0</p>
+<p>2、计算机语言发展史<br>机器语言—-&gt;汇编语言—-&gt;高级语言（面向过程（c）、面向对象（java））</p>
+<p>3、java语言迭代<br>96发布JDK1.0—-&gt;04年 JDK1.5（5.0）—-&gt;14年 JDK8.0</p>
 <p>4、应用领域</p>
 <blockquote>
-<p>后台开发；<br>
-大数据开发；<br>
-Android应用程序开发;客户端开发</p>
+<p>后台开发；<br>大数据开发；<br>Android应用程序开发;客户端开发</p>
 </blockquote>
-<p>5、java语言特点<br>
-面向对象性：<br>
-两个要素：类、对象<br>
-三个特征：封装、继承、多态<br>
-健壮性：去除了c语言当中的指针<br>
-自动的垃圾回收机制–&gt;仍然会出现内存溢出、内存泄漏<br>
-跨平台性：write once,run anywhere:一次编译，到处运行<br>
-归功于JVM</p>
-<h4 id="Java基本语法">Java基本语法</h4>
-<h5 id="变量与运算符">变量与运算符</h5>
-<h6 id="1、关键字与保留字">1、关键字与保留字</h6>
-<p>关键字（keyword）：被Java语言赋予了特殊含义，用作专门用途的字符串<br>
-特点：所有字母都是小写<br>
-true、false、null<br>
-保留字（reserved word）:现有Java版本尚未使用，但以后可能会使用。<br>
-goto、const<br>
-注意：自己命名标识符时要避免使用这些保留字。</p>
-<h6 id="2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符">2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符</h6>
-<p>凡是自己可以命名名字的地方都叫做标识符<br>
-26个字母大小写，0-9，——或$组成<br>
-数字不可以开头<br>
-不可以使用关键字和保留字，但能包含关键字和保留字<br>
-Java严格区分大小写，长度无限制<br>
-标识符不能包含空格<br>
-！！！不按规则编译不通过</p>
-<h6 id="3、Java中的名称规范-建议大家遵守">3、Java中的名称规范    建议大家遵守</h6>
-<p>包名：多单词组成时所有字母都小写：xxxyyyzzz<br>
-类名、接口名：多单词组成时，所有单词的首字母大写：XxxYyyZzz<br>
-变量名、方法名：多单词组成时，第一个单词首字母大写，第二个单词开始时每个单词首字母大写：xxxYyyZzz<br>
-常量名：所有字母都大写。多单词时每个字母用下划线连接：XXX_YYY_ZZZ</p>
+<p>5、java语言特点<br>面向对象性：<br>    两个要素：类、对象<br>    三个特征：封装、继承、多态<br>健壮性：去除了c语言当中的指针<br>        自动的垃圾回收机制–&gt;仍然会出现内存溢出、内存泄漏<br>跨平台性：write once,run anywhere:一次编译，到处运行<br>          归功于JVM</p>
+<h4 id="Java基本语法"><a href="#Java基本语法" class="headerlink" title="Java基本语法"></a>Java基本语法</h4><h5 id="变量与运算符"><a href="#变量与运算符" class="headerlink" title="变量与运算符"></a>变量与运算符</h5><h6 id="1、关键字与保留字"><a href="#1、关键字与保留字" class="headerlink" title="1、关键字与保留字"></a>1、关键字与保留字</h6><p>关键字（keyword）：被Java语言赋予了特殊含义，用作专门用途的字符串<br>    特点：所有字母都是小写<br>    true、false、null<br>保留字（reserved word）:现有Java版本尚未使用，但以后可能会使用。<br>goto、const<br>注意：自己命名标识符时要避免使用这些保留字。</p>
+<h6 id="2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符"><a href="#2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符" class="headerlink" title="2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符"></a>2、标识符（Identifier）：对各种变量、方法和类等要素命名时使用的字符序列称为标识符</h6><p>凡是自己可以命名名字的地方都叫做标识符<br>26个字母大小写，0-9，——或$组成<br>数字不可以开头<br>不可以使用关键字和保留字，但能包含关键字和保留字<br>Java严格区分大小写，长度无限制<br>标识符不能包含空格<br>！！！不按规则编译不通过</p>
+<h6 id="3、Java中的名称规范-建议大家遵守"><a href="#3、Java中的名称规范-建议大家遵守" class="headerlink" title="3、Java中的名称规范    建议大家遵守"></a>3、Java中的名称规范    建议大家遵守</h6><p>包名：多单词组成时所有字母都小写：xxxyyyzzz<br>类名、接口名：多单词组成时，所有单词的首字母大写：XxxYyyZzz<br>变量名、方法名：多单词组成时，第一个单词首字母大写，第二个单词开始时每个单词首字母大写：xxxYyyZzz<br>常量名：所有字母都大写。多单词时每个字母用下划线连接：XXX_YYY_ZZZ</p>
 <p>提高阅读性，尽量有意义，“见名知意”</p>
-<h4 id="变量">变量</h4>
-<p>定义：程序中最基本的存储单位，包含变量类型、变量名和存储的值<br>
-作用：用于在内存中保存数据<br>
-！！！！！<br>
-必须先声明，后使用<br>
-都定义在其作用域当中，只在作用域当中是有效的。作用域：一对{}内<br>
-同一个作用域当中不能定义重命名的变量</p>
-<h5 id="1、变量类型">1、变量类型</h5>
-<p>按数据类型分类<br>
-基本数据类型:<br>
-数值型：整数类型（byte\short\int\long）,浮点类型（float、double）<br>
-字符型（char）布尔型（boolean）<br>
-引用数据类型：<br>
-类（class）,接口（interface），数组（array）</p>
-<p>按变量在类中声明的位置（第四章 面向对象）<br>
-成员变量	vs		局部变量</p>
-<h5 id="2020-12-20更新">2020.12.20更新</h5>
-<h6 id="整数类型（byte-short-int-long）通常使用int类型定义整数">整数类型（byte\short\int\long）通常使用int类型定义整数</h6>
-<p>byte 1字节=8位 -128~127<br>
-short 2字节 -2^15~2^15-1<br>
-int 4字节<br>
-long 8字节	<br>
-声明long必须以l/L结尾</p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>定义：程序中最基本的存储单位，包含变量类型、变量名和存储的值<br>作用：用于在内存中保存数据<br>！！！！！<br>必须先声明，后使用<br>都定义在其作用域当中，只在作用域当中是有效的。作用域：一对{}内<br>同一个作用域当中不能定义重命名的变量</p>
+<h5 id="1、变量类型"><a href="#1、变量类型" class="headerlink" title="1、变量类型"></a>1、变量类型</h5><p>按数据类型分类<br>基本数据类型:<br>数值型：整数类型（byte\short\int\long）,浮点类型（float、double）<br>字符型（char）布尔型（boolean）<br>引用数据类型：<br>类（class）,接口（interface），数组（array）</p>
+<p>按变量在类中声明的位置（第四章 面向对象）<br>成员变量    vs        局部变量</p>
+<h5 id="2020-12-20更新"><a href="#2020-12-20更新" class="headerlink" title="2020.12.20更新"></a>2020.12.20更新</h5><h6 id="整数类型（byte-short-int-long）通常使用int类型定义整数"><a href="#整数类型（byte-short-int-long）通常使用int类型定义整数" class="headerlink" title="整数类型（byte\short\int\long）通常使用int类型定义整数"></a>整数类型（byte\short\int\long）通常使用int类型定义整数</h6><p>byte 1字节=8位 -128<del>127<br>short 2字节 -2^15</del>2^15-1<br>int 4字节<br>long 8字节<br>声明long必须以l/L结尾</p>
 <p>bit计算机最小存储单位 byte计算机中基本存储单位</p>
-<h6 id="浮点类型（float、double）">浮点类型（float、double）</h6>
-<p>c10^n	一部分表示数字c一部分表示10^n<br>
-float：单精度，尾数可以精确到7位有效数字	4字节	比long还大<br>
-double：双精度，精度是float两倍。通常采用此类型	8字节	<br>
-定义float类型变量时，变量要以“f”或“F”结尾</p>
-<h6 id="字符型（char）1字符-2字节">字符型（char）1字符=2字节</h6>
-<p>char=‘’;	定义char变量时，通常使用‘’，内部只能写一个字符<br>
-表示方式：1、声明一个字符 2、转义字符 “\n”换行符 “\t”制表符（相当于tab键）“\r”回车符 3、直接使用Unicode值来表示字符型变量</p>
-<h6 id="布尔型（boolean）只能取true-false">布尔型（boolean）只能取true/false</h6>
-<p>条件判断/循环结构使用</p>
-<h5 id="自动类型转换">自动类型转换</h5>
-<p>基本数据类型之间的转换</p>
-<p>前提：<br>
-7种基本数据类型变量之间的运算，不包括Boolean类型变量</p>
-<h6 id="1、自动类型转换：">1、自动类型转换：</h6>
-<pre><code>结论：当容量小的数据类型的变量于容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。
-byte、char、short--&gt;int--&gt;long--&gt;float--&gt;double	
-特别的：当byte、char、short三种类型做运算时，结果为int类型（包括三种类型作同种运算）
-</code></pre>
+<h6 id="浮点类型（float、double）"><a href="#浮点类型（float、double）" class="headerlink" title="浮点类型（float、double）"></a>浮点类型（float、double）</h6><p>c10^n    一部分表示数字c一部分表示10^n<br>float：单精度，尾数可以精确到7位有效数字    4字节    比long还大<br>double：双精度，精度是float两倍。通常采用此类型    8字节<br>定义float类型变量时，变量要以“f”或“F”结尾  </p>
+<h6 id="字符型（char）1字符-2字节"><a href="#字符型（char）1字符-2字节" class="headerlink" title="字符型（char）1字符=2字节"></a>字符型（char）1字符=2字节</h6><p>char=’’;    定义char变量时，通常使用‘’，内部只能写一个字符<br>表示方式：1、声明一个字符 2、转义字符 “\n”换行符 “\t”制表符（相当于tab键）“\r”回车符 3、直接使用Unicode值来表示字符型变量</p>
+<h6 id="布尔型（boolean）只能取true-false"><a href="#布尔型（boolean）只能取true-false" class="headerlink" title="布尔型（boolean）只能取true/false"></a>布尔型（boolean）只能取true/false</h6><p>条件判断/循环结构使用</p>
+<h5 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h5><p>基本数据类型之间的转换</p>
+<p>前提：<br>7种基本数据类型变量之间的运算，不包括Boolean类型变量</p>
+<h6 id="1、自动类型转换："><a href="#1、自动类型转换：" class="headerlink" title="1、自动类型转换："></a>1、自动类型转换：</h6><pre><code>结论：当容量小的数据类型的变量于容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。
+byte、char、short--&gt;int--&gt;long--&gt;float--&gt;double    
+特别的：当byte、char、short三种类型做运算时，结果为int类型（包括三种类型作同种运算）</code></pre>
 <p>说明：容量大小表示数的大小范围</p>
-<h6 id="2、强制类型转换">2、强制类型转换</h6>
-<p>强制类型转换：自动类型提升运算的逆运算</p>
-<p>1、需要使用强转符：()<br>
-2、注意点：强制类型转换，可能导致精度损失。</p>
-<p>//整型常量，默认类型为int型<br>
-//浮点型常量，默认类型为double型</p>
-<p>字符串类型：<br>
-String类型变量的使用<br>
-1、String属于引用数据类型，字符串<br>
-2、使用一对&quot;&quot;<br>
-3、可以和8种数据类型作运算，且运算只能是连接运算：+<br>
-4、 运算结果仍然是String类型</p>
-<h6 id="不同进制的表示">不同进制的表示</h6>
-<p>二进制（binary）：0，1，0b或0B开头<br>
-十进制（decimal）：0-9，<br>
-八进制（octal）：0-7，以数字0开头<br>
-十六进制（hex）：0-9及A-F以0x或0X开头。此处A-F不区分大小写。</p>
-<p>最高位为符号位 0：正数	1：负数<br>
-负数的反码是原码各个位取反（符号位不变）<br>
-负数的补码是其反码+1<br>
-正数原码、补码、反码都相同</p>
+<h6 id="2、强制类型转换"><a href="#2、强制类型转换" class="headerlink" title="2、强制类型转换"></a>2、强制类型转换</h6><p>强制类型转换：自动类型提升运算的逆运算</p>
+<p>1、需要使用强转符：()<br>2、注意点：强制类型转换，可能导致精度损失。</p>
+<p>//整型常量，默认类型为int型<br>//浮点型常量，默认类型为double型</p>
+<p>字符串类型：<br>String类型变量的使用<br>1、String属于引用数据类型，字符串<br>2、使用一对””<br>3、可以和8种数据类型作运算，且运算只能是连接运算：+<br>4、 运算结果仍然是String类型</p>
+<h6 id="不同进制的表示"><a href="#不同进制的表示" class="headerlink" title="不同进制的表示"></a>不同进制的表示</h6><p>二进制（binary）：0，1，0b或0B开头<br>十进制（decimal）：0-9，<br>八进制（octal）：0-7，以数字0开头<br>十六进制（hex）：0-9及A-F以0x或0X开头。此处A-F不区分大小写。</p>
+<p>最高位为符号位 0：正数    1：负数<br>负数的反码是原码各个位取反（符号位不变）<br>负数的补码是其反码+1<br>正数原码、补码、反码都相同</p>
 <p>计算机底层都以补码的形式存储数据</p>
 ]]></content>
       <categories>
@@ -169,81 +75,28 @@ String类型变量的使用<br>
     <url>/2021/01/15/java%E7%AC%94%E8%AE%B03/</url>
     <content><![CDATA[<p>day 03 2020.12.21</p>
 <a id="more"></a>
-<h4 id="每日复习">每日复习</h4>
-<h5 id="1、标识符的命名规则有哪些？（编译错误）">1、标识符的命名规则有哪些？（编译错误）</h5>
-<p>*26个字母大小写，0-9，——或$组成<br>
-*数字不可以开头<br>
-*不可以使用关键字和保留字，但能包含关键字和保留字<br>
-*Java严格区分大小写，长度无限制</p>
-<h5 id="2、标识的命名规范有哪些？">2、标识的命名规范有哪些？</h5>
-<p>包名：xxxyyyzzz<br>
-类名、接口名：XxxYyyZzz<br>
-变量名、方法名：xxxYyyZzz<br>
-常量名：XXX_YYY_ZZZ</p>
-<h5 id="3、数据类型">3、数据类型</h5>
-<p>基本数据类型：<br>
-数值型：整数类型（byte（1字节）、short（2）、int（4）、long（8字节））<br>
-浮点型：float（4字节）、double（8字节）<br>
-字符型：char（1字符=2字节）<br>
-布尔型：true、false</p>
+
+<h4 id="每日复习"><a href="#每日复习" class="headerlink" title="每日复习"></a>每日复习</h4><h5 id="1、标识符的命名规则有哪些？（编译错误）"><a href="#1、标识符的命名规则有哪些？（编译错误）" class="headerlink" title="1、标识符的命名规则有哪些？（编译错误）"></a>1、标识符的命名规则有哪些？（编译错误）</h5><p>*26个字母大小写，0-9，——或$组成<br>*数字不可以开头<br>*不可以使用关键字和保留字，但能包含关键字和保留字<br>*Java严格区分大小写，长度无限制</p>
+<h5 id="2、标识的命名规范有哪些？"><a href="#2、标识的命名规范有哪些？" class="headerlink" title="2、标识的命名规范有哪些？"></a>2、标识的命名规范有哪些？</h5><p>包名：xxxyyyzzz<br>类名、接口名：XxxYyyZzz<br>变量名、方法名：xxxYyyZzz<br>常量名：XXX_YYY_ZZZ</p>
+<h5 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h5><p>基本数据类型：<br>数值型：整数类型（byte（1字节）、short（2）、int（4）、long（8字节））<br>浮点型：float（4字节）、double（8字节）<br>字符型：char（1字符=2字节）<br>布尔型：true、false</p>
 <p>引用数据类型：类、接口、数组</p>
-<h5 id="4、自动类型转换运算规则">4、自动类型转换运算规则</h5>
-<p>结论：当容量小的数据类型的变量于容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。<br>
-​	byte、char、short–&gt;int–&gt;long–&gt;float–&gt;double	<br>
-​特别的：当byte、char、short三种类型做运算时，结果为int类型（包括三种类型作同种运算）<br>
-说明：容量大小表示数的大小范围</p>
+<h5 id="4、自动类型转换运算规则"><a href="#4、自动类型转换运算规则" class="headerlink" title="4、自动类型转换运算规则"></a>4、自动类型转换运算规则</h5><p>结论：当容量小的数据类型的变量于容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。<br>​    byte、char、short–&gt;int–&gt;long–&gt;float–&gt;double<br>​特别的：当byte、char、short三种类型做运算时，结果为int类型（包括三种类型作同种运算）<br>说明：容量大小表示数的大小范围</p>
 <p>string无论与哪种类型数据做运算都是连接运算：“+”</p>
-<h5 id="5、-强制类型转换：自动类型提升运算的逆运算">5、 强制类型转换：自动类型提升运算的逆运算</h5>
-<p>容量大—&gt;容量小<br>
-1、需要使用强转符：()<br>
-2、注意点：强制类型转换，可能导致精度损失。</p>
-<p>//整型常量，默认类型为int型<br>
-//浮点型常量，默认类型为double型</p>
-<h4 id="运算符">运算符</h4>
-<p>算术、赋值、比较（关系）、逻辑、位、三元</p>
-<h5 id="算术：-正负">算术：+/- 正负</h5>
-<p>+、-、、/ 加减乘除<br>
-% 取余运算</p>
-<p>//结果的运算与被模数的符号相同<br>
-//开发中，经常使用取模符号判断能否被除尽的情况<br>
-//（前）++：先自增1，然后再运算<br>
-//（后）++：先运算，后自增1<br>
-//–同理</p>
-<h5 id="赋值：">赋值：=</h5>
-<p>+=、-=、=、/=、%=<br>
-//支持连续赋值<br>
-//不会改变数据类型</p>
+<h5 id="5、-强制类型转换：自动类型提升运算的逆运算"><a href="#5、-强制类型转换：自动类型提升运算的逆运算" class="headerlink" title="5、 强制类型转换：自动类型提升运算的逆运算"></a>5、 强制类型转换：自动类型提升运算的逆运算</h5><p>容量大—&gt;容量小<br>1、需要使用强转符：()<br>2、注意点：强制类型转换，可能导致精度损失。</p>
+<p>//整型常量，默认类型为int型<br>//浮点型常量，默认类型为double型</p>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p>算术、赋值、比较（关系）、逻辑、位、三元</p>
+<h5 id="算术：-正负"><a href="#算术：-正负" class="headerlink" title="算术：+/- 正负"></a>算术：+/- 正负</h5><p> +、-、、/ 加减乘除<br>      % 取余运算</p>
+<p>//结果的运算与被模数的符号相同<br>//开发中，经常使用取模符号判断能否被除尽的情况<br>//（前）++：先自增1，然后再运算<br>//（后）++：先运算，后自增1<br>//–同理</p>
+<h5 id="赋值："><a href="#赋值：" class="headerlink" title="赋值：="></a>赋值：=</h5><p>+=、-=、=、/=、%=<br>//支持连续赋值<br>//不会改变数据类型</p>
 <figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="comment">//开发中，实现+2的方法有哪几种</span></span><br><span class="line"><span class="number">1</span>、<span class="built_in">num</span> = <span class="built_in">num</span> + <span class="number">2</span>;</span><br><span class="line"><span class="number">2</span>、<span class="built_in">num</span> += <span class="number">2</span>;（推荐）</span><br><span class="line"><span class="comment">//+1的方法</span></span><br><span class="line"><span class="number">1</span>、<span class="built_in">num</span> = <span class="built_in">num</span> + <span class="number">1</span>;</span><br><span class="line"><span class="number">2</span>、<span class="built_in">num</span> += <span class="number">1</span>;</span><br><span class="line"><span class="number">3</span>、<span class="built_in">num</span>++;（推荐）</span><br></pre></td></tr></table></figure>
-<h5 id="比较运算符：">比较运算符：</h5>
-<p>==/|=/&lt;/&gt;/&lt;=?&gt;=<br>
-结果都是boolean型（true/false）</p>
-<h5 id="逻辑运算符：">逻辑运算符：</h5>
-<p>&amp;/&amp;&amp;（且）|/||（或）<br>
-！（非）<br>
-^（异或）相同就false 不同就true</p>
-<h5 id="说明：">说明：</h5>
-<p>1、操作的都是boolean型运算符<br>
-2、&amp;/&amp;&amp;：1、运算结果相同 2、左边为true时，执行右边的运算 3、左边为false时，&amp;执行右边操作 &amp;&amp;不执行后续操作<br>
-|/||1、运算结果相同 2、左边为false时，执行右边的运算 3、左边为truee时，|执行右边操作 ||不执行后续操作<br>
-开发中使用&amp;&amp;/||</p>
-<p>位运算符（2进制运算）有范围限制<br>
-左移 3 &lt;&lt; 2 = 12 --&gt; 3<em>2</em>2 = 12<br>
-右移 3 &gt;&gt; 1 = 1 —&gt; 3/2 = 1<br>
-无符号右移（空缺位都是用0填补） 3&gt;&gt;&gt;1 = 1 —&gt; 3/2 = 1<br>
-操作的都是整型变量<br>
-面试题：最高效方式的计算2 * 8 ？ 2 &lt;&lt; 3 或 8 &lt;&lt; 1</p>
-<p>&amp;：只有1&amp;1是1，其余都是0<br>
-|：只要有一个是1就是1，其余都是0<br>
-^：只要一样就是0，不一样就是1		<br>
-~：取反，各二进制码按补码各位取反</p>
+<h5 id="比较运算符："><a href="#比较运算符：" class="headerlink" title="比较运算符："></a>比较运算符：</h5><p>==/|=/&lt;/&gt;/&lt;=?&gt;=<br>结果都是boolean型（true/false）</p>
+<h5 id="逻辑运算符："><a href="#逻辑运算符：" class="headerlink" title="逻辑运算符："></a>逻辑运算符：</h5><p>&amp;/&amp;&amp;（且）|/||（或）<br>！（非）<br>^（异或）相同就false 不同就true</p>
+<h5 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h5><p>1、操作的都是boolean型运算符<br>2、&amp;/&amp;&amp;：1、运算结果相同 2、左边为true时，执行右边的运算 3、左边为false时，&amp;执行右边操作 &amp;&amp;不执行后续操作<br>|/||1、运算结果相同 2、左边为false时，执行右边的运算 3、左边为truee时，|执行右边操作 ||不执行后续操作<br>开发中使用&amp;&amp;/||</p>
+<p>位运算符（2进制运算）有范围限制<br>左移 3 &lt;&lt; 2 = 12 –&gt; 3<em>2</em>2 = 12<br>右移 3 &gt;&gt; 1 = 1 —&gt; 3/2 = 1<br>无符号右移（空缺位都是用0填补） 3&gt;&gt;&gt;1 = 1 —&gt; 3/2 = 1<br>操作的都是整型变量<br>面试题：最高效方式的计算2 * 8 ？ 2 &lt;&lt; 3 或 8 &lt;&lt; 1</p>
+<p>&amp;：只有1&amp;1是1，其余都是0<br>|：只要有一个是1就是1，其余都是0<br>^：只要一样就是0，不一样就是1<br>~：取反，各二进制码按补码各位取反</p>
 <figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">练习<span class="number">1</span>：交换两个变量的值</span><br><span class="line">int <span class="attr">num1</span> = <span class="number">10</span>;</span><br><span class="line">int <span class="attr">num2</span> = <span class="number">20</span>;</span><br><span class="line">方式<span class="number">1</span>：定义临时变量</span><br><span class="line">int num3;</span><br><span class="line"><span class="attr">num3</span> = num1;</span><br><span class="line"><span class="attr">num1</span> = num2;</span><br><span class="line"><span class="attr">num2</span> = num3;</span><br><span class="line">方式<span class="number">2</span>：好处：不用定义临时变量 坏处：有可能超出变量范围</span><br><span class="line">弊端：只能适用于数值类型</span><br><span class="line"><span class="attr">num1</span> = num1 + num2;</span><br><span class="line"><span class="attr">num2</span> = num1 - num2;</span><br><span class="line"><span class="attr">num1</span> = num1 - num2;</span><br></pre></td></tr></table></figure>
-<h5 id="三元运算符">三元运算符</h5>
-<p>结构：（条件表达式）？表达式1：表达式2<br>
-说明：1、表达式boolean类型 2、条件表达式true/false 执行条件表达式1/2<br>
-3、表达式1和表达式2要求是一样的。<br>
-4、三元运算符可以嵌套使用。</p>
-<p>凡是可以用三元运算符的地方可以改写成if-else结构，反之不一定。<br>
-两者皆可时优先选择三元运算符</p>
+<h5 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h5><p>结构：（条件表达式）？表达式1：表达式2<br>说明：1、表达式boolean类型 2、条件表达式true/false 执行条件表达式1/2<br>3、表达式1和表达式2要求是一样的。<br>4、三元运算符可以嵌套使用。</p>
+<p>凡是可以用三元运算符的地方可以改写成if-else结构，反之不一定。<br>两者皆可时优先选择三元运算符</p>
 <figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">如何实现一个<span class="number">0</span>~<span class="number">255</span>的十六进制，例如<span class="number">60</span>的十六进制</span><br><span class="line"><span class="comment">//方法一：自动实现</span></span><br><span class="line"><span class="keyword">String</span> str1 = Integer.toBinaryString(<span class="number">60</span>);</span><br><span class="line"><span class="comment">//方法二：手动实现</span></span><br><span class="line"><span class="keyword">int</span> i1 = <span class="number">60</span>;</span><br><span class="line"><span class="keyword">int</span> i2 = i1&amp;<span class="number">15</span>;</span><br><span class="line"><span class="keyword">String</span> j = (i2&gt;<span class="number">9</span>)?(<span class="keyword">char</span>)(i2<span class="number">-10</span>+<span class="string">&#x27;A&#x27;</span>)+<span class="string">&quot;&quot;</span>:i2+<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> temp =i1 &gt;&gt;<span class="number">4</span>;</span><br><span class="line">i2 = temp &amp; <span class="number">15</span>;</span><br><span class="line"><span class="keyword">String</span> k = (i2&gt;<span class="number">9</span>)?(<span class="keyword">char</span>)(i2<span class="number">-10</span>+<span class="string">&#x27;A&#x27;</span>)+<span class="string">&quot;&quot;</span>:<span class="number">2</span>i+<span class="string">&quot;&quot;</span>;</span><br><span class="line">System.out.<span class="built_in">println</span>(k+<span class="string">&quot;&quot;</span>+j);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>java基础知识</category>
@@ -256,86 +109,30 @@ String类型变量的使用<br>
   <entry>
     <title>JAVA笔记&lt;一&gt;</title>
     <url>/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h5 id="根据b站尚硅谷课程所作">根据b站尚硅谷课程所作</h5>
-<p>day 1 2020.12.19</p>
+    <content><![CDATA[<h5 id="根据b站尚硅谷课程所作"><a href="#根据b站尚硅谷课程所作" class="headerlink" title="根据b站尚硅谷课程所作"></a>根据b站尚硅谷课程所作</h5><p>day 1 2020.12.19  </p>
 <a id="more"></a>
 <p><img src="/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/1.JPG" alt="java学习思维导图"></p>
-<h6 id="常用dos命令">常用dos命令</h6>
-<p>dir:列出当前目录下的文件以及文件夹<br>
-md:创建目录<br>
-rd:删除目录<br>
-cd:进入指定目录<br>
-cd…：退回到上一级指定目录<br>
-cd:退回到根目录<br>
-del:删除文件<br>
-rd:删除目录文件夹（需要是空的）<br>
-exit:退出dos命令行</p>
-<h6 id="c-c-开发慢执行快适合底层开发-java面向对象开发快-python">c/c++ 开发慢执行快适合底层开发 java面向对象开发快 &lt; python</h6>
-<h4 id="java语言发展及特点">java语言发展及特点</h4>
-<p>Java SE:桌面级应用<br>
-Java EE:企业版<br>
-Java ME:移动端</p>
+<h6 id="常用dos命令"><a href="#常用dos命令" class="headerlink" title="常用dos命令"></a>常用dos命令</h6><p>dir:列出当前目录下的文件以及文件夹<br>md:创建目录<br>rd:删除目录<br>cd:进入指定目录<br>cd..：退回到上一级指定目录<br>cd:退回到根目录<br>del:删除文件<br>rd:删除目录文件夹（需要是空的）<br>exit:退出dos命令行  </p>
+<h6 id="c-c-开发慢执行快适合底层开发-java面向对象开发快-lt-python"><a href="#c-c-开发慢执行快适合底层开发-java面向对象开发快-lt-python" class="headerlink" title="c/c++ 开发慢执行快适合底层开发 java面向对象开发快 &lt; python"></a>c/c++ 开发慢执行快适合底层开发 java面向对象开发快 &lt; python</h6><h4 id="java语言发展及特点"><a href="#java语言发展及特点" class="headerlink" title="java语言发展及特点"></a>java语言发展及特点</h4><p>Java SE:桌面级应用<br>Java EE:企业版<br>Java ME:移动端  </p>
 <p>Java舍弃c指针  继承c++面向对象</p>
-<p>特点：<br>
-1、面向对象、类、封装、继承、多态<br>
-2、健壮性<br>
-3、跨平台性<br>
-核心机制：1、JVM 2、垃圾收集装置</p>
-<p>JDK java开发工具包<br>
-JRE java运行环境<br>
-JRE = JVM + Jave SE标准类库</p>
-<p>path：window操作系统执行命令时，所要搜索的路径<br>
-目的：希望路径下面的文件可以在任何文件路径下执行成功</p>
-<p>javac：对java文件进行编译<br>
-java：对生成的class文件进行运行</p>
-<p>class 关键字 定义类<br>
-java编写  严格要求大小写<br>
-window 不严格执行大小写</p>
+<p>特点：<br>1、面向对象、类、封装、继承、多态<br>2、健壮性<br>3、跨平台性<br>核心机制：1、JVM 2、垃圾收集装置</p>
+<p>JDK java开发工具包<br>JRE java运行环境<br>JRE = JVM + Jave SE标准类库</p>
+<p>path：window操作系统执行命令时，所要搜索的路径<br>目的：希望路径下面的文件可以在任何文件路径下执行成功</p>
+<p>javac：对java文件进行编译<br>java：对生成的class文件进行运行</p>
+<p>class 关键字 定义类<br>java编写  严格要求大小写<br>window 不严格执行大小写 </p>
 <p>错误1、找不到类或无法加载类；解决办法：删除环境变量CLASSPATH</p>
-<h5 id="Comment注释">Comment注释</h5>
-<p>1、单行注释 //单行注释：<br>
-2、多行注释<br>
-/*</p>
-<p><em>/<br>
-3、文档注释（java特有）<br>
-/</em>*</p>
-<p>*/<br>
-文档注释内容可以被JDK提供的工具javadoc所解析，<br>
-生成一套以网页文件形式体现的该程序的说明文档<br>
-javadoc -d myHello -author -version HelloJava.java<br>
-!!!不可以嵌套使用</p>
-<p>作用：1、对所写的程序进行解释说明、增强可读性、方便自己别人<br>
-2、调试所写的程序（注释掉不参与编译，换句话说，<br>
-编译以后生成的.class文件不含有注释的信息）</p>
-<h5 id="Java-API文档">Java API文档</h5>
-<p>application programming interface 习惯上：将语言提供的类库，都称为api<br>
-针对于提供的类库如何使用，给的一个说明书。类似于《新华字典》</p>
-<h4 id="对第一个java程序总结">对第一个java程序总结</h4>
-<h6 id="1、编写-编译-运行">1、编写-编译-运行</h6>
-<p>编写：保存在.java结尾的源文件<br>
-编译：使用javac命令编译java源文件。格式 javac 源文件名.java<br>
-运行：使用java.exe命令解释运行我们的字节码文件。格式：java 类名<br>
-.java文件（源文件）-----&gt;.class文件（字节码文件）-----&gt;结果<br>
-<img src="/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/3.JPG" alt="java运行过程"></p>
-<h6 id="2、声明">2、声明</h6>
-<p>可以声明多个class。但是只能最多有一个类声明为public的。而且要求声明为public的类的类名必须与源文件相同。</p>
-<h6 id="3、程序入口">3、程序入口</h6>
-<p>程序的入口是main()方法。格式是固定的。<br>
-//public static void main(String a[]){//arguments:参数}</p>
-<h6 id="4、输出语句">4、输出语句</h6>
-<p>System.out.println();//先输出后换行<br>
-System.out.prin();//只输出不换行</p>
-<h6 id="5、每个执行语句都以“-”结束。">5、每个执行语句都以“;”结束。</h6>
-<h6 id="6、编译过程：">6、编译过程：</h6>
-<p>编译以后，会生成一个或多个字节码文件。字节码文件的文件名与java源文件中的类名相同。</p>
-<h6 id="7、良好的编程风格">7、良好的编程风格</h6>
-<p>正确的注释和注释风格<br>
-正确的缩进和空白<br>
-tab缩进 运算符两边习惯性加一个空格<br>
-*块的风格</p>
-<h6 id="文本编辑工具：记事本、notepad、editplus">文本编辑工具：记事本、notepad、editplus</h6>
-<h6 id="集成开发环境（IDE）：eclipse、MyEclipse、IDEA">集成开发环境（IDE）：eclipse、MyEclipse、IDEA</h6>
-]]></content>
+<h5 id="Comment注释"><a href="#Comment注释" class="headerlink" title="Comment注释"></a>Comment注释</h5><p>1、单行注释 //单行注释：<br>2、多行注释<br>/*</p>
+<p>*/<br>3、文档注释（java特有）<br>/**</p>
+<p>*/<br>文档注释内容可以被JDK提供的工具javadoc所解析，<br>生成一套以网页文件形式体现的该程序的说明文档<br>javadoc -d myHello -author -version HelloJava.java<br>!!!不可以嵌套使用</p>
+<p>作用：1、对所写的程序进行解释说明、增强可读性、方便自己别人<br>      2、调试所写的程序（注释掉不参与编译，换句话说，<br>      编译以后生成的.class文件不含有注释的信息）</p>
+<h5 id="Java-API文档"><a href="#Java-API文档" class="headerlink" title="Java API文档"></a>Java API文档</h5><p>application programming interface 习惯上：将语言提供的类库，都称为api<br>针对于提供的类库如何使用，给的一个说明书。类似于《新华字典》</p>
+<h4 id="对第一个java程序总结"><a href="#对第一个java程序总结" class="headerlink" title="对第一个java程序总结"></a>对第一个java程序总结</h4><h6 id="1、编写-编译-运行"><a href="#1、编写-编译-运行" class="headerlink" title="1、编写-编译-运行"></a>1、编写-编译-运行</h6><p>编写：保存在.java结尾的源文件<br>编译：使用javac命令编译java源文件。格式 javac 源文件名.java<br>运行：使用java.exe命令解释运行我们的字节码文件。格式：java 类名<br>.java文件（源文件）—–&gt;.class文件（字节码文件）—–&gt;结果<br><img src="/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/3.JPG" alt="java运行过程"></p>
+<h6 id="2、声明"><a href="#2、声明" class="headerlink" title="2、声明"></a>2、声明</h6><p>可以声明多个class。但是只能最多有一个类声明为public的。而且要求声明为public的类的类名必须与源文件相同。</p>
+<h6 id="3、程序入口"><a href="#3、程序入口" class="headerlink" title="3、程序入口"></a>3、程序入口</h6><p>程序的入口是main()方法。格式是固定的。<br>//public static void main(String a[]){//arguments:参数}</p>
+<h6 id="4、输出语句"><a href="#4、输出语句" class="headerlink" title="4、输出语句"></a>4、输出语句</h6><p>System.out.println();//先输出后换行<br>System.out.prin();//只输出不换行</p>
+<h6 id="5、每个执行语句都以“-”结束。"><a href="#5、每个执行语句都以“-”结束。" class="headerlink" title="5、每个执行语句都以“;”结束。"></a>5、每个执行语句都以“;”结束。</h6><h6 id="6、编译过程："><a href="#6、编译过程：" class="headerlink" title="6、编译过程："></a>6、编译过程：</h6><p>编译以后，会生成一个或多个字节码文件。字节码文件的文件名与java源文件中的类名相同。</p>
+<h6 id="7、良好的编程风格"><a href="#7、良好的编程风格" class="headerlink" title="7、良好的编程风格"></a>7、良好的编程风格</h6><p>正确的注释和注释风格<br>正确的缩进和空白<br>tab缩进 运算符两边习惯性加一个空格<br>*块的风格</p>
+<h6 id="文本编辑工具：记事本、notepad、editplus"><a href="#文本编辑工具：记事本、notepad、editplus" class="headerlink" title="文本编辑工具：记事本、notepad、editplus"></a>文本编辑工具：记事本、notepad、editplus</h6><h6 id="集成开发环境（IDE）：eclipse、MyEclipse、IDEA"><a href="#集成开发环境（IDE）：eclipse、MyEclipse、IDEA" class="headerlink" title="集成开发环境（IDE）：eclipse、MyEclipse、IDEA"></a>集成开发环境（IDE）：eclipse、MyEclipse、IDEA</h6>]]></content>
       <categories>
         <category>java基础知识</category>
       </categories>
