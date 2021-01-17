@@ -109,7 +109,7 @@ byte、char、short--&gt;int--&gt;long--&gt;float--&gt;double
   <entry>
     <title>JAVA笔记&lt;一&gt;</title>
     <url>/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h5 id="根据b站尚硅谷课程所作"><a href="#根据b站尚硅谷课程所作" class="headerlink" title="根据b站尚硅谷课程所作"></a>根据b站尚硅谷课程所作</h5><p>day 1 2020.12.19  </p>
+    <content><![CDATA[<h5 id="根据b站尚硅谷课程-所作"><a href="#根据b站尚硅谷课程-所作" class="headerlink" title="根据b站尚硅谷课程!所作"></a>根据<a href="https://www.bilibili.com/video/BV1Kb411W75N?from=search&seid=6409718367673724326">b站尚硅谷课程</a>!所作</h5><p>day 1 2020.12.19  </p>
 <a id="more"></a>
 <p><img src="/2021/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/1.JPG" alt="java学习思维导图"></p>
 <h6 id="常用dos命令"><a href="#常用dos命令" class="headerlink" title="常用dos命令"></a>常用dos命令</h6><p>dir:列出当前目录下的文件以及文件夹<br>md:创建目录<br>rd:删除目录<br>cd:进入指定目录<br>cd..：退回到上一级指定目录<br>cd:退回到根目录<br>del:删除文件<br>rd:删除目录文件夹（需要是空的）<br>exit:退出dos命令行  </p>
